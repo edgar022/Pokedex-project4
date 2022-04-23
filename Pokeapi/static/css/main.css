@@ -5,6 +5,7 @@ body{
 }
 h2{
     font-family: 'Oswald', sans-serif;
+    color: aqua;
 }
 header{
     background: rgb(34, 34, 211);
