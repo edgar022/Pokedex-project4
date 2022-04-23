@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <title>pokedex.1</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>pokedex.1</h1>
+        </div>
+    </header>
+    <section id="TarjetasPoke">
+        {%for i in range(0, len)%}
+        <div class="container">
+            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+                    <strong>ID:</strong> #{{number[i]}}
+                    </span>
+            <img src={{photo[i]}} class="card-img-top mx-auto d-block" alt="Foto Pokemon" style="width:50%"alt="Foto Pokemon">
+            <hr size="5px">
+            <div class="card-body">
+                <h2 class="card-title text-center text-uppercase">{{pokename[i]}}</h5>
+            </div>
+            <div class="card-footer">
+                <p class="card-text text-center"><strong>Tipo :</strong> {{types[i]}} </p>
+            </div>
+        </div>
+        {%endfor%}
+    </section>
+</body>
+</html>
